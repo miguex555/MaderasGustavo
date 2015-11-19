@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateVendedoresTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateVendedoresLabel_idVendedores}" for="idVendedores" />
+                    <h:inputText id="idVendedores" value="#{vendedoresController.selected.idVendedores}" title="#{bundle.CreateVendedoresTitle_idVendedores}" required="true" requiredMessage="#{bundle.CreateVendedoresRequiredMessage_idVendedores}"/>
+                    <h:outputLabel value="#{bundle.CreateVendedoresLabel_tipoDoc}" for="tipoDoc" />
+                    <h:inputText id="tipoDoc" value="#{vendedoresController.selected.tipoDoc}" title="#{bundle.CreateVendedoresTitle_tipoDoc}" required="true" requiredMessage="#{bundle.CreateVendedoresRequiredMessage_tipoDoc}"/>
+                    <h:outputLabel value="#{bundle.CreateVendedoresLabel_numDoc}" for="numDoc" />
+                    <h:inputText id="numDoc" value="#{vendedoresController.selected.numDoc}" title="#{bundle.CreateVendedoresTitle_numDoc}" required="true" requiredMessage="#{bundle.CreateVendedoresRequiredMessage_numDoc}"/>
+                    <h:outputLabel value="#{bundle.CreateVendedoresLabel_nombres}" for="nombres" />
+                    <h:inputText id="nombres" value="#{vendedoresController.selected.nombres}" title="#{bundle.CreateVendedoresTitle_nombres}" required="true" requiredMessage="#{bundle.CreateVendedoresRequiredMessage_nombres}"/>
+                    <h:outputLabel value="#{bundle.CreateVendedoresLabel_apellidos}" for="apellidos" />
+                    <h:inputText id="apellidos" value="#{vendedoresController.selected.apellidos}" title="#{bundle.CreateVendedoresTitle_apellidos}" required="true" requiredMessage="#{bundle.CreateVendedoresRequiredMessage_apellidos}"/>
+                    <h:outputLabel value="#{bundle.CreateVendedoresLabel_idUsuario}" for="idUsuario" />
+                    <h:selectOneMenu id="idUsuario" value="#{vendedoresController.selected.idUsuario}" title="#{bundle.CreateVendedoresTitle_idUsuario}" >
+                        <f:selectItems value="#{usuariosController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{vendedoresController.create}" value="#{bundle.CreateVendedoresSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{vendedoresController.prepareList}" value="#{bundle.CreateVendedoresShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateVendedoresIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

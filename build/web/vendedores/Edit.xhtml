@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditVendedoresTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditVendedoresLabel_idVendedores}" for="idVendedores" />
+                    <h:inputText id="idVendedores" value="#{vendedoresController.selected.idVendedores}" title="#{bundle.EditVendedoresTitle_idVendedores}" required="true" requiredMessage="#{bundle.EditVendedoresRequiredMessage_idVendedores}"/>
+                    <h:outputLabel value="#{bundle.EditVendedoresLabel_tipoDoc}" for="tipoDoc" />
+                    <h:inputText id="tipoDoc" value="#{vendedoresController.selected.tipoDoc}" title="#{bundle.EditVendedoresTitle_tipoDoc}" required="true" requiredMessage="#{bundle.EditVendedoresRequiredMessage_tipoDoc}"/>
+                    <h:outputLabel value="#{bundle.EditVendedoresLabel_numDoc}" for="numDoc" />
+                    <h:inputText id="numDoc" value="#{vendedoresController.selected.numDoc}" title="#{bundle.EditVendedoresTitle_numDoc}" required="true" requiredMessage="#{bundle.EditVendedoresRequiredMessage_numDoc}"/>
+                    <h:outputLabel value="#{bundle.EditVendedoresLabel_nombres}" for="nombres" />
+                    <h:inputText id="nombres" value="#{vendedoresController.selected.nombres}" title="#{bundle.EditVendedoresTitle_nombres}" required="true" requiredMessage="#{bundle.EditVendedoresRequiredMessage_nombres}"/>
+                    <h:outputLabel value="#{bundle.EditVendedoresLabel_apellidos}" for="apellidos" />
+                    <h:inputText id="apellidos" value="#{vendedoresController.selected.apellidos}" title="#{bundle.EditVendedoresTitle_apellidos}" required="true" requiredMessage="#{bundle.EditVendedoresRequiredMessage_apellidos}"/>
+                    <h:outputLabel value="#{bundle.EditVendedoresLabel_idUsuario}" for="idUsuario" />
+                    <h:selectOneMenu id="idUsuario" value="#{vendedoresController.selected.idUsuario}" title="#{bundle.EditVendedoresTitle_idUsuario}" >
+                        <f:selectItems value="#{usuariosController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <h:commandLink action="#{vendedoresController.update}" value="#{bundle.EditVendedoresSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditVendedoresViewLink}"/>
+                <br />
+                <h:commandLink action="#{vendedoresController.prepareList}" value="#{bundle.EditVendedoresShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditVendedoresIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

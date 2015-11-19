@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewVendedoresTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewVendedoresLabel_idVendedores}"/>
+                    <h:outputText value="#{vendedoresController.selected.idVendedores}" title="#{bundle.ViewVendedoresTitle_idVendedores}"/>
+                    <h:outputText value="#{bundle.ViewVendedoresLabel_tipoDoc}"/>
+                    <h:outputText value="#{vendedoresController.selected.tipoDoc}" title="#{bundle.ViewVendedoresTitle_tipoDoc}"/>
+                    <h:outputText value="#{bundle.ViewVendedoresLabel_numDoc}"/>
+                    <h:outputText value="#{vendedoresController.selected.numDoc}" title="#{bundle.ViewVendedoresTitle_numDoc}"/>
+                    <h:outputText value="#{bundle.ViewVendedoresLabel_nombres}"/>
+                    <h:outputText value="#{vendedoresController.selected.nombres}" title="#{bundle.ViewVendedoresTitle_nombres}"/>
+                    <h:outputText value="#{bundle.ViewVendedoresLabel_apellidos}"/>
+                    <h:outputText value="#{vendedoresController.selected.apellidos}" title="#{bundle.ViewVendedoresTitle_apellidos}"/>
+                    <h:outputText value="#{bundle.ViewVendedoresLabel_idUsuario}"/>
+                    <h:outputText value="#{vendedoresController.selected.idUsuario}" title="#{bundle.ViewVendedoresTitle_idUsuario}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{vendedoresController.destroyAndView}" value="#{bundle.ViewVendedoresDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewVendedoresEditLink}"/>
+                <br />
+                <h:commandLink action="#{vendedoresController.prepareCreate}" value="#{bundle.ViewVendedoresCreateLink}" />
+                <br />
+                <h:commandLink action="#{vendedoresController.prepareList}" value="#{bundle.ViewVendedoresShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewVendedoresIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

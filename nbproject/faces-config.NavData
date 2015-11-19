@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="vendedores/Create.xhtml" x="400" y="450" zoom="true"/>
+        <Node id="masterProd/Edit.xhtml" x="150" y="150" zoom="true"/>
+        <Node id="usuarios/List.xhtml" x="650" y="750" zoom="true"/>
+        <Node id="clientes/List.xhtml" x="400" y="150" zoom="true"/>
+        <Node id="estadosPedido/List.xhtml" x="400" y="600" zoom="true"/>
+        <Node id="estadosPedido/Edit.xhtml" x="150" y="600" zoom="true"/>
+        <Node id="productos/Create.xhtml" x="900" y="450" zoom="true"/>
+        <Node id="masterProd/View.xhtml" x="650" y="150" zoom="true"/>
+        <Node id="estadosPedido/Create.xhtml" x="150" y="750" zoom="true"/>
+        <Node id="pedidos/Edit.xhtml" x="900" y="150" zoom="true"/>
+        <Node id="masterProd/Create.xhtml" x="650" y="300" zoom="true"/>
+        <Node id="estadosPedido/View.xhtml" x="1150" y="450" zoom="true"/>
+        <Node id="pedidos/Create.xhtml" x="1650" y="300" zoom="true"/>
+        <Node id="masterProd/List.xhtml" x="1150" y="150" zoom="true"/>
+        <Node id="template.xhtml" x="400" y="900" zoom="true"/>
+        <Node id="clientes/Edit.xhtml" x="400" y="300" zoom="true"/>
+        <Node id="clientes/View.xhtml" x="1150" y="300" zoom="true"/>
+        <Node id="index.xhtml" x="150" y="1050" zoom="true"/>
+        <Node id="pedidos/List.xhtml" x="650" y="450" zoom="true"/>
+        <Node id="productos/List.xhtml" x="1400" y="150" zoom="true"/>
+        <Node id="vendedores/View.xhtml" x="1400" y="300" zoom="true"/>
+        <Node id="usuarios/Create.xhtml" x="400" y="750" zoom="true"/>
+        <Node id="pedidos/View.xhtml" x="150" y="900" zoom="true"/>
+        <Node id="vendedores/Edit.xhtml" x="900" y="600" zoom="true"/>
+        <Node id="usuarios/Edit.xhtml" x="1900" y="150" zoom="true"/>
+        <Node id="clientes/Create.xhtml" x="1650" y="150" zoom="true"/>
+        <Node id="productos/View.xhtml" x="150" y="300" zoom="true"/>
+        <Node id="productos/Edit.xhtml" x="150" y="450" zoom="true"/>
+        <Node id="usuarios/View.xhtml" x="650" y="600" zoom="true"/>
+        <Node id="vendedores/List.xhtml" x="900" y="300" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>
